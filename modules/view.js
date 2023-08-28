@@ -18,7 +18,11 @@ export class View {
         this.repoList.addEventListener('click', (event) => {
             let target = event.target.closest('li');
             if (!target) return;
+            
             this.addToList(target);
+            if (!this.repoList.children.length) {
+                this.repoList.classList.remove('list-visible')
+            }
         })
     }
 
@@ -27,14 +31,15 @@ export class View {
         removeButton.addEventListener('click', (event) => {
             let parent = event.target.parentElement;
             parent.remove()
-            if (this.addedRepo.children.length == 0) {
-                this.addedRepoTitle.textContent = ' '
+            if (!this.addedRepo.children.length) {
+                this.addedRepo.style.padding = 0;
             }
         })
         repo.append(removeButton);
         this.addedRepo.append(repo);
         if (this.addedRepo.children) {
             this.addedRepoTitle.textContent = 'Added Repositories:'
+            this.addedRepo.style.padding = '10px'
         }
         this.searchInput.value = ''
     }

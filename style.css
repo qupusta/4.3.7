@@ -11,7 +11,7 @@ body {
 .search-input {
     outline: none;
     border-style: none;
-    border-radius: 16px;
+    border-radius: 13px;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
     height: 80px;
     width: 50vh;
@@ -24,7 +24,6 @@ body {
 
 .search-line {
     align-items: center;
-    margin-bottom: 15px;
 }
 
 
@@ -32,18 +31,22 @@ body {
 .repo-list {
     height: 0px;
     margin: 0 auto;
+    padding: 0 10px 10px;
     width: 50vh;
 }
 
 .list-visible {
-    padding: 0;
+    background-color: rgb(255, 255, 255);
     height: auto;
+    padding: 10px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: inset 0px 10px 1px 3px rgba(255, 255, 255, 0.555);
 }
 
 
 
 .repo-info {
-    padding: 0;
     margin: 5px 0;
     color: rgb(250, 243, 229);
     letter-spacing: 2.5px;
@@ -51,9 +54,8 @@ body {
 }
 
 .repo {
-    margin-bottom: 10px;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 20px;
     display: block;
     max-width: 50vh;
     background-color: rgba(78, 47, 66, 0.5);
@@ -80,7 +82,19 @@ body {
     linear-gradient(-45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa)));
 }
 
+.remove-button:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.2);
+}
+
+.repo:hover {
+    transition: all ease-in-out 0.2s;
+    box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.507);
+}
+
 .added-repo {
+    background-color: aliceblue;
+    border-radius: 13px;
     padding: 0;
     width: 50vh;
     margin: 40px auto 0;
