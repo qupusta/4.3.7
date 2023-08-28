@@ -33,6 +33,7 @@ export class View {
             parent.remove()
             if (!this.addedRepo.children.length) {
                 this.addedRepo.style.padding = 0;
+                this.addedRepoTitle.textContent = ' '
             }
         })
         repo.append(removeButton);
