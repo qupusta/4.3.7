@@ -37,6 +37,9 @@ export class View {
             }
         })
         repo.append(removeButton);
+        const repoInfo = repo.querySelectorAll('.repo-info');
+        repoInfo[0].style.display = 'block'
+        repoInfo[1].style.display = 'block'
         this.addedRepo.append(repo);
         if (this.addedRepo.children) {
             this.addedRepoTitle.textContent = 'Added Repositories:'
@@ -57,7 +60,7 @@ export class View {
     createRepo(repoData) {
         const repoElement = this.createElement('li', 'repo');
 
-        const repoName = this.createElement('p', 'repo-info');
+        const repoName = this.createElement('p', 'repo-name');
         const repoOwner = this.createElement('p', 'repo-info');
         const repoStars = this.createElement('p', 'repo-info');
 

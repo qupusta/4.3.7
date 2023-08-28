@@ -38,22 +38,33 @@ body {
 .list-visible {
     background-color: rgb(255, 255, 255);
     height: auto;
-    padding: 10px;
+    padding: 21px;
+    transform: translateY(-11px);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     box-shadow: inset 0px 10px 1px 3px rgba(255, 255, 255, 0.555);
+    box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.4);
 }
 
 
 
 .repo-info {
-    margin: 5px 0;
+    display: none;
+    margin: 10px 0;
+    color: rgb(250, 243, 229);
+    letter-spacing: 2.5px;
+    font-size: 24px;
+}
+
+.repo-name {
+    margin: 10px 0;
     color: rgb(250, 243, 229);
     letter-spacing: 2.5px;
     font-size: 24px;
 }
 
 .repo {
+    margin-bottom: 7px;
     cursor: pointer;
     border-radius: 20px;
     display: block;
@@ -71,7 +82,7 @@ body {
     height: 35px;
     position: absolute;
     right: 30px;
-    top: 35px;
+    top: 45px;
     display: block;
     --weight: 2px;
     --aa: 1px; 
